@@ -1,0 +1,15 @@
+{
+  "name": "No Ink Skipping",
+  "manifest_version": 3,
+  "version": "0.1",
+  "description": "Disables \"ink skipping\" in links (text-decoration-skip-ink) for more legible underlining.",
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "all_frames": true,
+    "css": ["skip.css"]
+  }]
+}

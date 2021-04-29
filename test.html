@@ -1,0 +1,20 @@
+<head>
+<style>
+body,a,a:-webkit-any-link {
+  text-decoration-skip-ink: none !important;
+}
+
+a.forced {
+  text-decoration-skip-ink: auto !important;
+}
+</style>
+</head>
+<body>
+  <a href="http://google.com/?ignored" class="forced">why?</a>
+  <br/>
+  <br/>
+  Old behavior (Chrome 63 and earlier, restored by this extension):<br/>
+  <a href="http://google.com/?ignored">Why, oh why.</a><br/>
+  Current Chrome behavior:<br/>
+  <a class="forced" href="http://google.com/?ignored">Why, oh why.</a><br/>
+</body>
